@@ -7,12 +7,14 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 // path definition
 const ROOT = path.resolve(__dirname, '../../')
 const SRC = path.resolve(ROOT, './src')
+const DLL_DIR = path.resolve(ROOT, 'temp_dir')
 
 module.exports = {
   // paths
   ROOT,
 
   SRC,
+  DLL_DIR,
 
   dev: {
     // Various Dev Server settings
@@ -22,5 +24,17 @@ module.exports = {
     errorOverlay: true,
     notifyOnErrors: true,
     cliErrorDetails: false,
+  },
+
+  dll: {
+    name: 'DLL',
+    packages: [
+      // 'babel-polyfill',
+      // 'url-polyfill',
+
+      'react',
+      'react-dom',
+      'react-router-dom'
+    ],
   },
 }

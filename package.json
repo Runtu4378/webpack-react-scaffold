@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
-    "prod": "webpack --config ./build/webpack.prod.conf.js"
+
+    "prod": "webpack --config ./build/webpack.prod.conf.js",
+
+    "dll": "webpack --config ./build/webpack.dll.conf.js"
   },
   "repository": {
     "type": "git",
