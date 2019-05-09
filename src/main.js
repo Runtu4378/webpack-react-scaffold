@@ -1,4 +1,6 @@
+import Route from './router.js'
+
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <Route />,
   document.getElementById('root')
 )
