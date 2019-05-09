@@ -17,7 +17,7 @@ module.exports = {
   dev: {
     // Various Dev Server settings
     host: HOST || '0.0.0.0', // can be overwritten by process.env.HOST
-    port: PORT || 8080, // can be overwritten by 
+    port: PORT || 8080, // can be overwritten by process.env.PORT
 
     errorOverlay: true,
     notifyOnErrors: true,
