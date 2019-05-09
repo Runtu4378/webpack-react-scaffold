@@ -45,6 +45,8 @@ const createNotifierCallback = () => {
 }
 
 const extraConfig = {
+  mode: 'development',
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
 
@@ -92,5 +94,3 @@ if (!cliErrorDetails) {
 }
 
 module.exports = merge(baseWpConfig, extraConfig)
-
-// module.exports = {}

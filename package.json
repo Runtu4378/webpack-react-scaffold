@@ -4,7 +4,8 @@
   "description": "Configurable webpack scaffold",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js"
+    "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
+    "prod": "webpack --config ./build/webpack.prod.conf.js"
   },
   "repository": {
     "type": "git",
