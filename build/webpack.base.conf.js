@@ -1,6 +1,8 @@
 'use strict'
 const path = require('path')
 
+const webpack = require('webpack')
+
 const config = require('./config/index.js')
 
 const {
@@ -9,7 +11,6 @@ const {
 
 module.exports = {
   entry: path.resolve(SRC, './main.js'),
-
 
   module: {
     rules: [
@@ -23,5 +24,11 @@ module.exports = {
     ],
   },
 
-  plugins: [],
+  plugins: [
+    // 注册react全局引用
+    new webpack.ProvidePlugin({
+      'React': 'react',
+      'ReactDOM': 'react-dom',
+    }),
+  ],
 }
