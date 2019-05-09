@@ -1,3 +1,0 @@
-# filter.gitignore.clean "sed '/\/\*\* gitignore start \*\/.*\/\*\* gitignore end \*\//'d"
-[filter "gitignore"]
-	clean = sed \"s/\/\/gitignoreStart.*\/\/gitignoreEnd/\/\/gitignoreStart\/\/gitignoreEnd/g\"
