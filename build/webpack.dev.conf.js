@@ -7,7 +7,7 @@ const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-const config = require('./config/index.js')
+const config = require('./config/dev.js')
 const baseWpConfig = require('./webpack.base.conf.js')
 
 const {

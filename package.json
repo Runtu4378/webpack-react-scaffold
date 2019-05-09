@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Runtu4378/webpack-react-scaffold#readme",
   "dependencies": {
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
