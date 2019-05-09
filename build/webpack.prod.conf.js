@@ -9,11 +9,19 @@ const baseWpConfig = require('./webpack.base.conf.js')
 
 const {
   DLL_DIR,
+  OUTPUT_DIR,
+
   dll,
 } = config
 
 const extraConfig = {
   mode: 'production',
+
+  output: {
+    path: OUTPUT_DIR,
+    filename: '[name].[contenthash].js',
+    chunkFilename: 'chunks/[id].[contenthash]',
+  },
 
   plugins: [
     // 配置 dll

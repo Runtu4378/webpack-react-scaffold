@@ -8,6 +8,7 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const ROOT = path.resolve(__dirname, '../../')
 const SRC = path.resolve(ROOT, './src')
 const DLL_DIR = path.resolve(ROOT, 'temp_dir')
+const OUTPUT_DIR = path.resolve(ROOT, './dist')
 
 module.exports = {
   // paths
@@ -15,6 +16,7 @@ module.exports = {
 
   SRC,
   DLL_DIR,
+  OUTPUT_DIR,
 
   dev: {
     // Various Dev Server settings
