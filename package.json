@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
-
     "prod": "webpack --config ./build/webpack.prod.conf.js",
-
+    "local": "http-server dist",
     "dll": "webpack --config ./build/webpack.dll.conf.js"
   },
   "repository": {
@@ -28,11 +27,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "@loadable/component": "^5.9.0",
     "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.3",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "4.0.0-beta.5",
+    "http-server": "^0.11.1",
     "node-notifier": "^5.4.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.30.0",

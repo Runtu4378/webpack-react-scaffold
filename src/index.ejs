@@ -8,5 +8,8 @@
 </head>
 <body>
   <div id="root"></div>
+  <% if (htmlWebpackPlugin.options.DLL) { %>
+    <script src="/<%= htmlWebpackPlugin.options.DLL %>.js"></script>
+  <% } %>
 </body>
 </html>

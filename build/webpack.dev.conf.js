@@ -47,6 +47,13 @@ const createNotifierCallback = () => {
 const extraConfig = {
   mode: 'development',
 
+  output: {
+    path: dev.dir,
+    publicPath: dev.publicPath,
+    filename: '[name].js',
+    chunkFilename: 'chunks/[name].js',
+  },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
 
@@ -63,8 +70,8 @@ const extraConfig = {
 
   devtool: 'cheap-source-map',
   devServer: {
-    contentBase: './WDS_dist',
-    publicPath: '/',
+    contentBase: dev.dir,
+    publicPath: dev.publicPath,
     // 设置localhost端口
     host: host,
     port: port,
@@ -73,6 +80,14 @@ const extraConfig = {
     // open: true,
     hot: true,
     quiet: !cliErrorDetails,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^\/$/,
+          to: '/index.html',
+        }
+      ],
+    },
   },
 }
 

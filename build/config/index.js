@@ -19,6 +19,8 @@ module.exports = {
   OUTPUT_DIR,
 
   dev: {
+    dir: path.resolve(ROOT, 'WDS_dist'),
+    publicPath: '/',
     // Various Dev Server settings
     host: HOST || '0.0.0.0', // can be overwritten by process.env.HOST
     port: PORT || 8080, // can be overwritten by process.env.PORT
@@ -26,6 +28,10 @@ module.exports = {
     errorOverlay: true,
     notifyOnErrors: true,
     cliErrorDetails: false,
+  },
+
+  prod: {
+    publicPath: '/',
   },
 
   dll: {

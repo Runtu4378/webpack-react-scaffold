@@ -4,8 +4,18 @@ import {
   Link,
 } from 'react-router-dom'
 
-import Index from './routes/index'
-import About from './routes/about'
+import {
+  dynamicWrap,
+} from './common/utils.js'
+
+const Index = dynamicWrap(() => import(
+  /* webpackChunkName: "router_index" */ 
+  './routes/index'
+))
+const About = dynamicWrap(() => import(
+  /* webpackChunkName: "router_about" */
+  './routes/about'
+))
 
 export default () => {
   return (
@@ -22,8 +32,14 @@ export default () => {
           </ul>
         </nav>
 
-        <Route path="/" exact component={Index} />
-        <Route path="/about/" component={About} />
+        <Route
+          path="/" exact
+          component={Index}
+        />
+        <Route
+          path="/about/"
+          component={About}
+        />
       </div>
     </Router>
   );

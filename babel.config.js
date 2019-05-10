@@ -16,8 +16,12 @@ module.exports = function (api) {
     '@babel/preset-react',
     // 'stage-0',
   ]
+  const plugins = [
+    '@babel/plugin-syntax-dynamic-import',
+  ]
 
   return {
     presets,
+    plugins,
   }
 }
